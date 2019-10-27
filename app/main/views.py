@@ -49,3 +49,16 @@ def profile():
     profile_pic_path = url_for('static',filename='photos' + current_user.profile_pic_path)    
     return render_template('profile/profile.html',form=form)
 
+@main.route('/user/<name>/updateprofile',methods=['GET','POST'])
+@login_required
+def Updateprof(name):
+    form = UpdateProf()
+    user = User.query.filter_by(username = name).first()
+    if user == None:
+        abort(404)
+    if form.validate_on_submit():
+        user.bio = form.bio.data
+        user.save_user()
+        return redirect(url_for('.profile',name = name))
+    return render_template('profilel/updateprofile.html',form=form)
+
