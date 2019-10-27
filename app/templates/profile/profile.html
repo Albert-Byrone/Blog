@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 {% import 'bootstrap/wtf.html' as wtf %}
 {% block content %}
-<div class="container">
+<div class="container colormg">
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4">
@@ -34,7 +34,7 @@
         </div>
         <div class="col-md-6">
             <div class="container mt-4">
-                <div id="profileupdate">
+                <div id="profileupdate" style="color: white;">
                     <h2>Update Your Profile Here</h2>
                     {{wtf.quick_form(form)}}
                 </div>
