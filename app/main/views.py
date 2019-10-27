@@ -62,3 +62,18 @@ def Updateprof(name):
         return redirect(url_for('.profile',name = name))
     return render_template('profilel/updateprofile.html',form=form)
 
+@main.route('/new_post',methods=['GET','POST'])
+@login_required
+def new_blog():
+    subscribers = Subscriber.query.all()
+    form = CreateBlog()
+    if form.validate_on_submit():
+        title = form.title.data
+        user_id = current_user._get_current_object().id
+        content = form.content.data
+        blog = Blog(title = title, content = content,user_id=user_id)
+        blog.save_blog()
+        return redirect(url_for('main.index'))
+    return render_template('newblog.html',form = form)
+
+
