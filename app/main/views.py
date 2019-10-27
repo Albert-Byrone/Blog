@@ -83,3 +83,21 @@ def blog(id):
     blog = Blog.query.get_or_404(id)
     return render_template('blog.html',blog = blog ,comment= comments)
 
+@main.route('/blog/<blog_id>/update',methods=['GET','POST'])
+@login_required
+def updateblog(blog_id):
+    blog = Blog.query.get(blog_id)
+    if blog.user != current_user:
+        abort(404)
+    form = CreateBlog()
+    if form.validate_on_submit():
+        blog.title = form.title.data
+        blog.content = form.content.data
+        db.session.commit()
+        flash('You have updated your Blog')
+        return redirect(url_for('main.index',id=blog_id))
+    if request.method == 'GET':
+        form.title.data = blog.title
+        form.content.data = blog.content
+    return render_template('newblog.html',form = form)
+    
