@@ -1,0 +1,89 @@
+
+.land{
+  background-color: whitesmoke;
+}
+/* #landin{
+  height: 800px;
+} */
+body{
+    background-color: whitesmoke;
+    
+}
+nav,.card-header,.btn {
+
+    background-color: rgb(62,79,98) !important;
+}
+.card-header{
+    background-color: rgb(62,79,98) !important;
+    color: white;
+
+}
+.nav-link{
+    color: #FFFFFF;
+}
+ul li a:hover{
+    color: grey;
+}
+.card{
+    background-color: whitesmoke;
+}
+ .sidenav {
+    width: 200px;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    padding-top: 20px;
+  } 
+  .cardquote{
+    padding: 3%;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+   padding-top: 20px;
+  }
+  
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+ #form,#profileupdate{
+  display: none;
+ }
+ .account-img{
+   height: 250px;
+   width: 250px;
+   margin-right: 20px;
+   margin-bottom: 16px;
+
+ }
+ .blog-img{
+   height: 80px;
+   width: 80px;
+ }
+ #subscr{
+   border-radius: 5px;
+ }
+ .cardquote{
+  /* background-color:rgba(116, 116, 116, 0.786); */
+  padding: 3%;
+}
+#sidtext:hover{
+  color:black !important;
+}
+
+
+
+
