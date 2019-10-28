@@ -6,28 +6,28 @@
 
 # Description
 
-This is an application that allows users to sign  in or sign up and post one minute pitches.It also allows the to upvote and downvote on different pitches.
+THis is a flask  application that allows  users to post,edit and delete blogs.It also allows the registered users to post comments on various posts.
 
 ## Live Link
-https://app-pitch.herokuapp.com/
+
 
 ## User Story
 
-* Comment on the different pitches posted py other uses.
-* See the pitches posted by other uses.
-* Vote on s pitch they have viwed by giving it a upvote or a downvote.
+* A user can view the most recent posts.
+* View and comment the blog posts on the site.
+* A user should an email alert when a new post is made by joining a subscription.
 * Register to be allowed to log in to the application
-* View pitches from the different categories.
-* Submit a pitch to a specific category of their choice.
+* A user sees random quotes on the site
+* A writer can create a blog from the application and update or delete blogs I have created.
 
 ## BDD
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-| Load the page | **On page load** | Get all posts, Select between signup and login|
+| Load the page | **On page load** | Get all blogs, Select between signup and login|
 | Select SignUp| **Email**,**Username**,**Password** | Redirect to login|
-| Select Login | **Username** and **password** | Redirect to page with app pitches based on categories and commenting section|
+| Select Login | **Username** and **password** | Redirect to page with posted blogs|
 | Select comment button | **Comment** | Form that you input your comment|
-| Click on submit |  | Redirect to all comments tamplate with your comment and other comments|
+| Subscription |Email Address  | Flash message is displayed|
 
 
 
@@ -36,7 +36,7 @@ To get the code..
 
 1. Cloning the repository:
   ```bash
-  https://github.com/Albert-Byrone/pitches.git
+  https://github.com/Albert-Byrone/Blog.git
   ```
 2. Move to the folder and install requirements
   ```bash
@@ -62,6 +62,10 @@ Open the application on your browser `127.0.0.1:5000`.
 * [Python3.6](https://www.python.org/)
 * [Flask](http://flask.pocoo.org/)
 * [Heroku](https://heroku.com)
+
+## Known Bugs
+
+The subscription form is not working properly.
 
 ## Contact Information 
 
