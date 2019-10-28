@@ -21,3 +21,8 @@ class UpdateProf(FlaskForm):
         if username.data != current_user.username:
             if User.query.filter_by(username = username.data).first():
                 raise ValidationError("The username has already been taken")
+
+class CreateBlog(FlaskForm):
+    title = StringField('Title',validators=[Required()])
+    content = TextAreaField('Blog content',validators=[Required()])
+    submit = SubmitField('Post')
