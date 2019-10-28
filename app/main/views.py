@@ -110,3 +110,13 @@ def comment(blog_id):
     new_comment.save_comment()
     return redirect(url_for('main.blog',id= blog.id))
 
+@main.route('/subscribe',methods=['POST'])
+def subscribe():
+    email = request.form.get('subscriber')
+    new_subscriber =  Subscriber(email= email)
+    # new_subscriber.save_su/bscriber()
+    db.session.add(new_subscriber)
+    db.session.commit()
+    # mail_message("Subscribed to BLOBBER","email/welcome_subscriber",new_subscriber.email)
+    flash('Sucessfuly subscribed')
+    return redirect(url_for('main.index'))
