@@ -10,7 +10,13 @@ THis is a flask  application that allows  users to post,edit and delete blogs.It
 
 ## Live Link
 
+## ScreenShots
 
+ [home](https://i.postimg.cc/QtMhBBf4/comment.png)
+
+  [comment](https://i.postimg.cc/QtMhBBf4/comment.png)
+
+[addcomment](https://i.postimg.cc/d3bYS5wp/add.png)
 ## User Story
 
 * A user can view the most recent posts.
