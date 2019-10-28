@@ -8,6 +8,7 @@ from flask_login import login_required,current_user
 import secrets
 import os
 from PIL import Image
+from ..email import mail_message
 
 
 @main.route('/')
@@ -73,6 +74,8 @@ def new_blog():
         content = form.content.data
         blog = Blog(title = title, content = content,user_id=user_id)
         blog.save_blog()
+        for subscriber in subscribers:
+            mail_message('New blog post','email/new_blog',subscriber.email,blog=blog)
         return redirect(url_for('main.index'))
     return render_template('newblog.html',form = form)
 
