@@ -1,4 +1,4 @@
-# Pitch 
+# Blog
 
 ## Author 
 
@@ -10,11 +10,13 @@ THis is a flask  application that allows  users to post,edit and delete blogs.It
 
 ## Live Link
 
+Click this link to view the live application https://albert-blog.herokuapp.com/
+
 ## ScreenShots
 
- [home](https://i.postimg.cc/QtMhBBf4/comment.png)
+[home](https://i.postimg.cc/FF8NRH3p/home.png)
 
-  [comment](https://i.postimg.cc/QtMhBBf4/comment.png)
+[comment](https://i.postimg.cc/QtMhBBf4/comment.png)
 
 [addcomment](https://i.postimg.cc/d3bYS5wp/add.png)
 ## User Story
