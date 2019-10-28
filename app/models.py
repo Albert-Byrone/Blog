@@ -21,3 +21,13 @@ class User(UserMixin,db.Model):
     blog = db.relationship('Blog',backref='user',lazy='dynamic')
     comment = db.relationship('Comment',backref='user',lazy='dynamic')
 
+
+class Blog(db.Model):
+    __tablename__ = 'blogs'
+
+    id = db.Column(db.Integer,primary_key = True)
+    title =  db.Column(db.String(255),nullable = False)
+    content = db.Column(db.Text(),nullable = False)
+    posted = db.Column(db.DateTime,default = datetime.utcnow)
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+    comment = db.relationship('Comment',backref='blog',lazy='dynamic')
