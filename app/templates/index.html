@@ -1,21 +1,21 @@
 {% extends 'base.html'%}
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid"  >
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-2"  style="background-color: rgb(62,79,98);">
       <div class="sidenav">
         <div class="card">
           <div class="card text-center" style="widows: 100%;">
-            <div class="card-header">FOR BLOGGERS</div>
+            <div class="card-header mr-2 ml-2" >FOR BLOGGERS</div>
             <div class="card-body">
-              <a href="{{url_for('main.new_blog')}}" class="badge badge-pill text-warning">Submit Blog</a>
+              <a href="{{url_for('main.new_blog')}}" id="sidtext">Submit Blog</a>
             </div>
           </div>
         </div>
 
         <div class="card">
             <div class="card text-center" style="widows: 100%;">
-              <div class="card-header">FOR MARKETERS</div>
+              <div class="card-header  mr-2 ml-2">FOR MARKETERS</div>
               <div class="card-body">
                 <p>Doing blogger outreach or influencer marketing and want to connect with new influencers in niche markets? Improve your outreach by connecting with authority bloggers in your domain area. Feedspot media database has over 100k Influential Bloggers in over 1500 niche categories. Email us us the type of bloggers you want to reach out at anuj@feedspot.com </p>
               </div>
@@ -25,7 +25,7 @@
     </div>
     <div class="col-md-10">
       <div class="container">
-          <div class="main">
+          <div class="main" id="landin">
               
               <div class="container landing">
                   <div class="row ">
@@ -85,13 +85,13 @@
                               {{ message }}
                               </div>
                             {% endfor %}
-                              <form class="form-inline ml-2" action="#" method="POST">
+                              <form class="form-inline ml-2" action="{{url_for('main.subscribe')}}" method="POST">
                                   <div class="md-form form-group">
                                       <label class="white-color">Email Address...</label>
                                       <input type="email"  class="form-control " name ="subscriber" required>
                                   </div>
                                   <div class="md-form form-group">
-                                      <button class="btn btn-sm btn-outline-info" id="subs">Subscribe</button>
+                                      <button class="btn btn-sm btn-outline-info" id="subscr">Subscribe</button>
                                   </div>
                               </form>
                           </div>
