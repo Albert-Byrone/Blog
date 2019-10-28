@@ -1,6 +1,7 @@
 import os
 class Config:
-    pass
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://byrone:Albert254@localhost/blog'
+    SECRET_KEY = 'albert'
 
 
 class ProdConfig(Config):
