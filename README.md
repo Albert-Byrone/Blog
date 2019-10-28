@@ -6,7 +6,7 @@
 
 # Description
 
-THis is a flask  application that allows  users to post,edit and delete blogs.It also allows the registered users to post comments on various posts.
+This is a flask  application that allows  users to post,edit and delete blogs.It also allows the registered users to post comments on various posts.
 
 ## Live Link
 
