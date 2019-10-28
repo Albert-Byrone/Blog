@@ -44,3 +44,14 @@ class Blog(db.Model):
     def get_blog(self,id):
         blog = Blog.query.filter_by(id=id).first()
         return blog
+
+
+class Comment(db.Model):
+
+    __tablename__ = 'comments'
+    id = db.Column(db.Integer,primary_key =True)
+    comment = db.Column(db.String(255))
+    posted = db.Column(db.DateTime,default = datetime.utcnow)
+    blog_id = db.Column(db.Integer,db.ForeignKey("blogs.id"))
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+
