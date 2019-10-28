@@ -40,3 +40,7 @@ class Blog(db.Model):
         db.session.add(self)
         db.session.commit()
 
+    # @classmethod
+    def get_blog(self,id):
+        blog = Blog.query.filter_by(id=id).first()
+        return blog
