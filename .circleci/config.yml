@@ -48,9 +48,10 @@ jobs:
           name: run test
           command: |
             . venv/bin/activate
-            python test_blog.py test
-            python test_comment.py test
-            python user_test.py test
+            python manage test
+            # python test_blog.py test
+            # python test_comment.py test
+            # python user_test.py test
 
       - store_artifacts:
           path: test-reports
