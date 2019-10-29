@@ -48,7 +48,7 @@ jobs:
           name: run test
           command: |
             . venv/bin/activate
-            python test_blog test
+            python test_blog.py test
             python test_comment.py test
             python user_test.py test
 
